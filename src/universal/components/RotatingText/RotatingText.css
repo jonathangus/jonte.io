@@ -1,0 +1,78 @@
+
+.jobs {
+  color: var(--primary);
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.17);
+}
+
+.jobs li {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+  list-style-type: none;
+}
+
+.jobs li:first-child {
+  position: relative;
+}
+
+.jobs i {
+  transform-style: preserve-3d;
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  font-style: normal;
+}
+
+.jobs .visible i {
+  opacity: 1
+}
+
+.jobs i,
+.jobs .out {
+  animation: cd-rotate-2-out .4s forwards;
+}
+
+.visible .in {
+  animation: cd-rotate-in .4s forwards;
+}
+
+@keyframes cd-rotate-in {
+  0% {
+    opacity: 0;
+    transform: translateZ(-20px) rotateX(90deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateZ(-20px) rotateX(-10deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(-20px) rotateX(0deg);
+  }
+}
+
+@keyframes cd-rotate-out {
+  0% {
+    opacity: 1;
+    transform: translateZ(-20px) rotateX(0deg);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translateZ(-20px) rotateX(-100deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateZ(-20px) rotateX(-90deg);
+  }
+}

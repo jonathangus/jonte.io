@@ -1,0 +1,109 @@
+.Intro{
+  height: 100vh;
+  position: relative;
+}
+
+.canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  position: absolute;
+  z-index: 15;
+  color: white;
+  font-size: 90px;
+  text-transform: uppercase;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .27);
+}
+
+.fullImage {
+  /*background: url(../../images/bg.jpg);*/
+  background-size: cover;
+  background-position: left top;
+  position: absolute;
+  left:0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.wrap {
+  position: relative;
+  z-index:2;
+  max-width: var(--grid);
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.inner {
+  max-width: 500px;
+  text-align: center;
+}
+
+.social {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.media {
+  width: 40px;
+  height: 40px;
+  margin: 0 15px;
+  display: inline-block;
+  background-size: 100% 100%;
+}
+
+.github {
+  background-image: url(../../../images/github-logo.png);
+}
+
+.linkedin {
+  background-image: url(../../../images/linkedin-logo.png);
+}
+
+.email {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.email:after,
+.email:before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  display: inline-block;
+  background: white;
+  vertical-align: middle;
+  margin: 0 30px;
+  transition: transform 0.25s ease-in;
+}
+
+.email:hover:before {
+  transform: translateX(10px);
+}
+
+.email:hover:after {
+  transform: translateX(-10px);
+}
+
+.cred {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+  font-size: 12px;
+  color: white;
+  text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, .5);
+  text-decoration: none;
+}

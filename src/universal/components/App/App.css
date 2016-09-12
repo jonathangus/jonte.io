@@ -1,0 +1,55 @@
+:root {
+    --primary: #4ec2f0;
+    --main: #fafafa;
+    --text: #575352;
+    --grid: 1020px;
+    --white: #fafafa;
+    --black: #575352;
+
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../../fonts/montserrat-regular-webfont.eot');
+  src: url('../../../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../../../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+  url('../../../fonts/montserrat-regular-webfont.woff') format('woff'),
+  url('../../../fonts/montserrat-regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../../fonts/montserrat-bold-webfont.eot');
+  src: url('../../../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../../../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+  url('../../../fonts/montserrat-bold-webfont.woff') format('woff'),
+  url('../../../fonts/montserrat-bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding:0;
+}
+
+#app {
+  overflow: hidden;
+}
+
+body {
+  background: var(--main);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+  padding-bottom: 500px;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: 700;
+}

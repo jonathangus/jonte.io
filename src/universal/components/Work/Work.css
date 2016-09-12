@@ -1,0 +1,95 @@
+.inner {
+  width: var(--grid);
+  margin: 0 auto;
+}
+
+.hexagons {
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  height: 500px;
+  -webkit-perspective: 700px;
+  perspective: 700px;
+  z-index: 10;
+}
+
+.thumbs {
+  -webkit-transform: rotateX(45deg) rotateY(0deg);
+  transform: rotateX(45deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -ms-transform-origin: center 65%;
+  -webkit-transform-origin: center 65%;
+  transform-origin: center 65%;
+  z-index: 5;
+  width: 700px;
+}
+
+.column {
+  display: block;
+  float: left;
+  width: 62px;
+}
+
+.column:nth-child(odd) {
+  margin-top: 36px;
+}
+
+.hexagon {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+   transform: rotate(120deg);
+  cursor: pointer;
+  width: 196.66667px;
+  height: 393.33333px;
+  margin: -108.33333px 5px;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  opacity: 0.5;
+}
+
+.hexagon:first-child,
+.hexagon:nth-child(8n-2) {
+    margin-left: 108.33333px;
+  }
+
+.selectedHeca .hexagon,
+.hexagon:hover {
+  -ms-transform: translateZ(20px);
+  /* -webkit-transform: translateZ(20px); */
+  transform: rotate(120deg) translateZ(20px);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.hexa0 {
+  overflow: hidden;
+width: 100%;
+height: 100%;
+transform: rotate(-60deg);
+}
+
+.hexa1 {
+  width: 100%;
+height: 100%;
+background-repeat: no-repeat;
+background-position: 50%;
+background-color: #6a6a62;
+visibility: visible;
+transform: rotate(-60deg);
+position: relative;
+overflow: hidden;
+}
+.hexa2 {
+  position: absolute;
+left: 0;
+top: 81.23317px;
+height: 230.867px;
+z-index: 1;
+}

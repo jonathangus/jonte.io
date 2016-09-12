@@ -1,0 +1,52 @@
+.container {
+  padding: 160px 0;
+  position: relative;
+}
+
+.border {
+    width: 125%;
+    left: 0;
+    top: 0;
+    height: 200px;
+    position: absolute;
+    z-index: 20;
+    background: var(--main);
+    transform: rotate(3deg);
+    transform-origin: 2% 0;
+    left: -15%;
+    pointer-events: none;
+
+}
+
+.inner {
+  max-width: var(--grid);
+  margin: 0 auto;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  left: 35px;
+  background: var(--black);
+}
+
+.line:before {
+  top: -1px;
+}
+
+.line:after {
+  bottom: -1px;
+}
+
+.line:before,
+.line:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: var(--black);
+  position: absolute;
+  left: -5px;
+  border-radius: 50%;
+}
