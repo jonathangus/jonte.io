@@ -11,7 +11,7 @@ export default class Intro extends Component {
     const age = this.calculateAge();
 
     this.state = {
-      image: require('../../../images/bg.jpg'),
+      image: require('../../../images/me.jpg'),
       data: [
         {
           label: 'Age',
@@ -55,7 +55,7 @@ export default class Intro extends Component {
       data[0].decimal = age[1];
       this.setState({data: data});
     }, 100);
-    
+
     var granimInstance = new Granim({
       element: '#canvas-radial',
       direction: 'diagonal',

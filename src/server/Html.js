@@ -59,13 +59,22 @@ class Html extends Component {
         opacity: 1;
       }
     `;
-
     return (
      <html>
        <head>
          <meta charSet="utf-8"/>
          <title>{title}</title>
          <style>{css}</style>
+         <meta name="MobileOptimized" content="width"></meta>
+         <meta name="HandheldFriendly" content="true"></meta>
+         <meta property="og:title" content={title}></meta>
+         <meta property="og:type" content="website"></meta>
+         <meta property="og:url" content="https://jonathan-gustafsson.herokuapp.com"></meta>
+         <meta property="og:image" content={'a'}></meta>
+         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+         <meta property="fb:admins" content="733556657"></meta>
+         <meta property="fb:app_id" content="1072045509569270"></meta>
+         <meta name="description" content="Jonathan is a fullstack developer with a big love for front-end and a passion for React and Redux and Javascript overall."></meta>
        </head>
        <body>
          <script dangerouslySetInnerHTML={{__html: initialState}} />
