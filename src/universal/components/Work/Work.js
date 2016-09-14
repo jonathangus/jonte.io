@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../../data';
+import Skill from '../Skill/Skill';
 
 import styles from './Work.css';
 
@@ -8,39 +9,58 @@ export default class Work extends Component {
     super();
     this.state = {
       work: data.work,
-      selectedIndex: null
+      selectedIndex: null,
+      started: false,
+      workShown: false
     }
   }
 
   setActive(index) {
-    this.setState({
+    const newState = {
       selectedIndex: index
-    });
+    }
+
+    if(!this.state.started) {
+      newState.started = true;
+
+      setTimeout(() => {
+        this.setState({
+          workShown: true
+        })
+      }, 400);
+    }
+
+    this.setState(newState);
   }
 
   render () {
-    const { work, selectedIndex } = this.state;
+    const { work, selectedIndex, started, workShown} = this.state;
     const selected = work[selectedIndex];
 
     return (
       <section className={styles.container}>
         <div className={styles.inner}>
-          <div className={styles.hexagons}>
-            <div className={styles.thumbs}>
-            {work.map((w, index) =>
-              <div className={styles.hexagon + ' ' + (selectedIndex == index ? styles.selectedHeca: '')} onClick={this.setActive.bind(this, index)}>
-                <div className={styles.hexa0}>
-                <div className={styles.hexa1}><div className={styles.hexa2} style={{backgroundImage: `url(${this.state.work[index].image})`}}></div></div>
+          <h2 className={styles.title}>Selected work</h2>
+          <div className={styles.wrap}>
+            <div className={styles.hexagons}>
+              <div className={styles.thumbs + ' ' + (started ? styles.workSelected : '')}>
+              {work.map((w, index) =>
+                <div  key={index} className={styles.hexagon + ' ' + (selectedIndex == index ? styles.selectedHeca: '')} onClick={this.setActive.bind(this, index)}>
+                  <div className={styles.hexa0}>
+                  <div className={styles.hexa1}><div className={styles.hexa2} style={{backgroundImage: `url(${this.state.work[index].thumbnail})`}}></div></div>
+                  </div>
                 </div>
+              )}
               </div>
-            )}
             </div>
+            {selected ? <div className={styles.spotlight + ' ' + (workShown ? styles.workShown : '')}>
+              {selected.image ? <img src={selected.image} /> : null}
+              <h3>{selected.title}</h3>
+              <p dangerouslySetInnerHTML={{__html: selected.text}}></p>
+              <ul>{selected.skills.map((s, i) => <li key={i} ><Skill skill={s}/></li>)}</ul>
+              <a className={styles.button} href={selected.link.url} title={selected.link.text}>{selected.link.text}</a>
+            </div>  : null}
           </div>
-          {selected ? <div className="Work-spotlight">
-            {selected.title}
-            <img src={selected.image} />
-          </div>  : null}
-
 
         </div>
       </section>

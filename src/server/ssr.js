@@ -23,7 +23,7 @@ function renderApp(res, store, assets, renderProps) {
 
   const htmlStream = renderToStaticMarkup(
     <Html
-      title="HMR | SSR | FTW"
+      title="Jonathan Gustafsson"
       store={store}
       assets={assets}
       renderProps={renderProps}

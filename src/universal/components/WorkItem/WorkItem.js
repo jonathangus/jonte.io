@@ -11,7 +11,7 @@ export default class WorkItem extends React.Component {
         <div className="WorkItem-content">
           <div className="WorkItem-top">
             <span className="WorkItem-date">{dates}</span>
-            <h2 className="WorkItem-title">{label}</h2>
+            <h3 className="WorkItem-title">{label}</h3>
           </div>
           <p className="WorkItem-text">{text}</p>
         </div>

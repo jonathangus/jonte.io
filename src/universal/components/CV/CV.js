@@ -7,7 +7,7 @@ import styles from './CV.css'
 
 const getDistancePercentage = (element, center) => {
   let rect = element.getBoundingClientRect();
-  return center / (rect.top + (element.clientHeight / 2));
+  return center / (rect.top + (element.clientHeight / 2.5));
 }
 
 export default class CV extends Component {
@@ -56,6 +56,7 @@ export default class CV extends Component {
 
     return (
       <section ref='container' className={styles.container}>
+        <div className="CV-inner"><h2>So far, so good</h2></div>
         <div className={styles.border} style={{top: `-${borderTop}px`}}></div>
         <div className="CV-inner">
           <div className="CV-line"></div>
