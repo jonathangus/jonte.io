@@ -72,8 +72,9 @@ if (PROD) {
 }
 
 const server = http.createServer(app);
+const PORT = process.env.port || 3000;
 
-server.listen(3000, function() {
+server.listen(PORT, function() {
    const address = server.address();
    console.log(`${'>>>'.cyan} ${'Listening on:'.rainbow} ${'localhost::'.trap.magenta}${`${address.port}`.green}`);
  });
