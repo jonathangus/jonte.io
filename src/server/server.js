@@ -1,7 +1,7 @@
 import http    from 'http';
 import express from 'express';
 import colors  from 'colors';
-
+import favicon from 'serve-favicon';
 // Development Libraries
 import webpack from 'webpack';
 import devWebpackConfig from '../../webpack/webpack.config.dev';
@@ -15,6 +15,8 @@ import {
 const PROD = process.env.NODE_ENV === 'production';
 
 const app = express();
+
+app.use(favicon(__dirname + '/favicon.ico'));
 
 // Production settings
 if (PROD) {

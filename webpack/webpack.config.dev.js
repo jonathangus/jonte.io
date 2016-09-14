@@ -82,7 +82,7 @@ export default {
          importLoaders: 1,
          localIdentName: '[name]-[local]'
         //  localIdentName: '[path][name]-[local]'
-       })
+      }) + '!sass-loader'
      }
     ]
   }

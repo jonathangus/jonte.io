@@ -47,6 +47,8 @@
     "happypack": "^2.2.1",
     "node-sass": "^3.9.3",
     "querystring": "^0.2.0",
+    "sass-loader": "^4.0.2",
+    "serve-favicon": "^2.3.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.22",
     "webpack-dev-middleware": "^1.6.1",

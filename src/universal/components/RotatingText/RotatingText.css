@@ -1,6 +1,7 @@
+@import '../../../client/scss/vars.scss';
 
 .jobs {
-  color: var(--primary);
+  color: $primary;
   display: inline-block;
   position: relative;
   text-align: left;

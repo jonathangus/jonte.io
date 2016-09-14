@@ -46,7 +46,7 @@ export default class CV extends Component {
 
       this.setState({
         selectedItem: closest.prop,
-        borderTop: topVal < 110 ? topVal : 110
+        borderTop: (((topVal < 200 ? topVal : 200) / 200) * 0.55) * 100
       });
     });
   }
@@ -57,7 +57,7 @@ export default class CV extends Component {
     return (
       <section ref='container' className={styles.container}>
         <div className={styles.inner}><h2>So far, so good</h2></div>
-        <div className={styles.border} style={{top: `-${borderTop}px`}}></div>
+        <div className={styles.border}><div style={{transform: `translateY(-${borderTop}%)`}}></div></div>
         <div className={styles.inner}>
           <div className={styles.line}></div>
           {items.map((i, k) => <WorkItem active={ selectedItem == 'item-' + k} ref={'item-' + k} {...i} key={k} /> )}

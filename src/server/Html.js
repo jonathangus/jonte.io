@@ -59,6 +59,7 @@ class Html extends Component {
         opacity: 1;
       }
     `;
+    const desc = 'Jonathan is a fullstack developer with a big love for front-end and a passion for React and Redux and Javascript overall.';
     return (
      <html>
        <head>
@@ -74,7 +75,8 @@ class Html extends Component {
          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
          <meta property="fb:admins" content="733556657"></meta>
          <meta property="fb:app_id" content="1072045509569270"></meta>
-         <meta name="description" content="Jonathan is a fullstack developer with a big love for front-end and a passion for React and Redux and Javascript overall."></meta>
+         <meta property="og:description" content={desc}></meta>
+         <meta name="description" content={desc}></meta>
        </head>
        <body>
          <script dangerouslySetInnerHTML={{__html: initialState}} />

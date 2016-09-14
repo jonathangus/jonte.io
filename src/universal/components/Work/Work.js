@@ -41,7 +41,7 @@ export default class Work extends Component {
       <section className={styles.container}>
         <div className={styles.inner}>
           <h2 className={styles.title}>Selected work</h2>
-          <div className={styles.wrap}>
+          <div className={styles.wrap + ' ' + (started ? styles.wrapAir: '')}>
             <div className={styles.hexagons}>
               <div className={styles.thumbs + ' ' + (started ? styles.workSelected : '')}>
               {work.map((w, index) =>

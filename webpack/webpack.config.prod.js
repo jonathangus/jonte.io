@@ -58,7 +58,7 @@ export default {
          modules: true,
          importLoaders: 1,
          localIdentName: '[name]_[local]_[hash:base64:5]'
-       }),
+       })  + '!sass-loader',
        include: clientInclude,
      },
      { test: /\.(eot|png|jpg|jpeg|gif|woff)$/, loader: 'file-loader' },

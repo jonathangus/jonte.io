@@ -1,3 +1,5 @@
+@import '../../../client/scss/vars.scss';
+
 .InfoItem {
   margin-bottom: 10px;
   font-size: 30px;
@@ -6,17 +8,25 @@
   align-items: center;
 }
 
+@media (max-width: 1200px) {
+  .InfoItem {
+    justify-content: center;
+  }
+}
+
+
 .label {
   color: white;
   font-size: 20px;
+  margin-right: 6px;
 }
 
 .val {
-  color: var(--primary);
+  color: $primary;
   font-weight: bold;
-  margin-left: 6px;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.17);
   text-transform: uppercase;
+  min-width: 120px;
 }
 
 .dec {

@@ -1,8 +1,15 @@
+@import '../../../client/scss/vars.scss';
+@import '../../../client/scss/mixins.scss';
+
 .container {
   display: flex;
-  padding-bottom: 100px;
   position: relative;
-  align-items: center;
+  align-items: flex-start;;
+  @include fp(padding-bottom, 50, 100);
+
+  @include b(600px) {
+    align-items: center;
+  }
 }
 
 .container:last-child {
@@ -10,28 +17,42 @@
 }
 
 .icon {
-  width: 70px;
-  height: 70px;
-  background: var(--primary);
+  background: $primary;
   border-radius: 50%;
-  margin-right: 80px;
-  box-shadow: inset 0 0 0 20px var(--white);
+  box-shadow: inset 0 0 0 20px $white;
   transition: box-shadow 0.3s ease;
-  border: 1px solid var(--primary);
+  border: 1px solid $primary;
   position: relative;
   z-index: 1;
+  flex-shrink: 0;
+  margin-top: 48px;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  @include fp(margin-right, 30, 80);
+
+  @include b(600px) {
+    width: 70px;
+    margin-left:0;
+    height: 70px;
+    margin-top: 0;
+  }
 
 }
 
 .itemActive .icon {
-  box-shadow: inset 0 0 0 0px var(--white);
+  box-shadow: inset 0 0 0 0px $white;
 }
 
 .content {
   flex: 1;
   padding-top: 20px;
-  opacity: 0.6;
   transition: opacity 0.3s ease;
+
+  @include b(600px) {
+    opacity: 0.6;
+    padding-right: 20px;
+  }
 }
 
 .itemActive .content {
@@ -53,7 +74,9 @@
 }
 
 .itemActive .text {
-  transform: translateX(20px);
+  @include b(600px) {
+    transform: translateX(20px);
+  }
 }
 
 .top {
@@ -62,6 +85,8 @@
 }
 
 .itemActive .top {
-  transform: translateX(20px);
   transition-delay: 0.05s;
+  @include b(600px) {
+    transform: translateX(20px);
+  }
 }

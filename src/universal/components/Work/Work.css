@@ -1,5 +1,8 @@
+@import '../../../client/scss/vars.scss';
+@import '../../../client/scss/mixins.scss';
+
 .inner {
-  width: var(--grid);
+  max-width: $grid;
   margin: 0 auto;
   position: relative;
   transition: all 0.5s ease-out;
@@ -11,13 +14,26 @@
 
 .wrap {
   display: flex;
-    margin-top: 150px;
+  margin-top: 150px;
+  @include bm(900px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.wrapAir {
+  margin:0;
 }
 
 .hexagons {
-  /*position: relative;*/
+  max-width: 100%;
   display: inline-block;
   width: 500px;
+
+  @include bm(900px) {
+    height: 300px;
+  }
 }
 
 .thumbs {
@@ -29,12 +45,21 @@
   transform: translateX(-50%) scale(1.5);
   position: absolute;
   transition: all 0.4s ease;
+
+  @include bm(900px) {
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 .workSelected {
-  transform: rotateX(45deg) scale(1.15) rotateY(0deg);
-  margin-left: 100px;
-  left: 0;
+  transform:rotateX(25deg) translateX(-50%) scale(1);
+  left: 50%;
+
+  @include b(900px) {
+    left: 0;
+    transform: rotateX(45deg) scale(1.15) rotateY(0deg);
+    margin-left: 100px;
+  }
 }
 
 .hexagon {

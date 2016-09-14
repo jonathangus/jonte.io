@@ -1,6 +1,15 @@
+@import '../../../client/scss/vars.scss';
+
 .Intro{
   height: 100vh;
   position: relative;
+
+}
+
+@media (max-width: 900px) {
+  .Intro {
+    max-height: 700px;
+  }
 }
 
 .canvas {
@@ -12,7 +21,6 @@
   position: absolute;
   z-index: 15;
   color: white;
-  font-size: 90px;
   text-transform: uppercase;
   top: 10%;
   left: 50%;
@@ -23,7 +31,6 @@
 }
 
 .fullImage {
-  /*background: url(../../images/bg.jpg);*/
   background-size: cover;
   background-position: left top;
   position: absolute;
@@ -34,17 +41,30 @@
   z-index: 1;
 }
 
+@media (max-width: 600px) {
+  .fullImage {
+    background-position: center;
+  }
+}
+
 .wrap {
   position: relative;
   z-index:2;
-  max-width: var(--grid);
+  max-width: $grid;
   margin: 0 auto;
-  height: 80vh;
+  height: 80%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: column;
 }
+
+@media (min-width: 1200px) {
+  .wrap {
+    align-items: flex-end;
+  }
+}
+
 
 .inner {
   max-width: 500px;
@@ -73,28 +93,29 @@
 }
 
 .email {
-  color: var(--white);
+  color: $white;
   text-decoration: none;
 }
+@media (min-width: 900px) {
+  .email:after,
+  .email:before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    display: inline-block;
+    background: white;
+    vertical-align: middle;
+    margin: 0 30px;
+    transition: transform 0.25s ease-in;
+  }
 
-.email:after,
-.email:before {
-  content: '';
-  width: 30px;
-  height: 1px;
-  display: inline-block;
-  background: white;
-  vertical-align: middle;
-  margin: 0 30px;
-  transition: transform 0.25s ease-in;
-}
+  .email:hover:before {
+    transform: translateX(10px);
+  }
 
-.email:hover:before {
-  transform: translateX(10px);
-}
-
-.email:hover:after {
-  transform: translateX(-10px);
+  .email:hover:after {
+    transform: translateX(-10px);
+  }
 }
 
 .cred {
