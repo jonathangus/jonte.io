@@ -45,12 +45,27 @@ class Html extends Component {
     );
 
 
+    const css = `
+      body {
+        background-color#fafafa;
+      }
+      #app {
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          background-color: #fafafa;
+      }
+
+      #app.have-loaded {
+        opacity: 1;
+      }
+    `;
 
     return (
      <html>
        <head>
          <meta charSet="utf-8"/>
          <title>{title}</title>
+         <style>{css}</style>
        </head>
        <body>
          <script dangerouslySetInnerHTML={{__html: initialState}} />

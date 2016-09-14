@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import InfoItem from '../InfoItem/InfoItem';
-// import Granim from 'granim';
+import Granim from 'granim';
 import Egg from '../../extra/egg';
 
 import styles from './Intro.css';

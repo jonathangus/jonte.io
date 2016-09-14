@@ -42,6 +42,7 @@ export const renderPage = (req, res) => {
   const makeRoutes = require('../../build/prerender');
   const assets     = require('../../build/assets.json');
 
+
   assets.manifest.text = fs.readFileSync(
     join(__dirname, '..', '..', 'build', basename(assets.manifest.js)),
     'utf-8'
