@@ -10,6 +10,7 @@
   -webkit-perspective: 700px;
   perspective: 700px;
   z-index: 10;
+  padding: 0 20px;
 }
 
 .wrap {
@@ -127,7 +128,7 @@
 
 .spotlight {
   display: inline-block;
-  width: 500px;
+  max-width: 500px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
