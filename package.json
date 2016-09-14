@@ -41,18 +41,17 @@
     "babel-preset-stage-0": "^6.5.0",
     "chokidar": "^1.6.0",
     "css-loader": "^0.25.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
     "happypack": "^2.2.1",
     "node-sass": "^3.9.3",
     "querystring": "^0.2.0",
     "style-loader": "^0.13.1",
-    "webpack": "2.1.0-beta.4",
+    "webpack": "^2.1.0-beta.4",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.2",
-    "webpack": "^2.1.0-beta.4"
+    "webpack-hot-middleware": "^2.12.2"
   },
   "engines": {
-   "node": "5.0.0"
- }
+    "node": "5.0.0"
+  }
 }
