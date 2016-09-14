@@ -6,6 +6,7 @@ import favicon from 'serve-favicon';
 import webpack from 'webpack';
 import devWebpackConfig from '../../webpack/webpack.config.dev';
 import chokidar from 'chokidar';
+import compression from 'compression';
 
 import {
   renderPage,
@@ -20,7 +21,7 @@ app.use(favicon(__dirname + '/favicon.ico'));
 
 // Production settings
 if (PROD) {
-
+  app.use(compression());
   app.use('/static', express.static('build'));
 
   app.get('*', renderPage);

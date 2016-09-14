@@ -2,7 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import qs from 'querystring';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-
+import CompressionPlugin from 'compression-webpack-plugin';
 const root = process.cwd();
 const src  = path.join(root, 'src');
 const build = path.join(root, 'build');
@@ -40,6 +40,13 @@ export default {
       '__CLIENT__': false,
       '__PRODUCTION__': true,
       'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
   ],
   module: {
