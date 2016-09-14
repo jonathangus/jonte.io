@@ -30,7 +30,10 @@ export default {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin({
+      filename: '[name].css',
+      allChunks: true
+    }),
     new webpack.optimize.UglifyJsPlugin({compressor: {warnings: false}}),
     new webpack.optimize.LimitChunkCountPlugin({maxChunks: 1}),
     new webpack.DefinePlugin({
@@ -45,11 +48,14 @@ export default {
       {
         test: /\.css$/,
         include: serverInclude,
-        loader: ExtractTextPlugin.extract('style-loader', 'css?'+qs.stringify({
-          modules: true,
-          importLoaders: 1,
-          localIdentName: '[name]_[local]_[hash:base64:5]'
-        }))
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css?'+qs.stringify({
+            modules: true,
+            importLoaders: 1,
+            localIdentName: '[name]_[local]_[hash:base64:5]'
+          })
+        })
       },
       { test: /\.(png|jpg|jpeg|gif|woff)$/, loader: 'file-loader' },
       {

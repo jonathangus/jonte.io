@@ -7,13 +7,13 @@ export default class WorkItem extends React.Component {
     const {label, dates, text, active} = this.props;
     return (
       <article className={styles.container + ' ' + (active ? styles.itemActive : '')}>
-        <div className="WorkItem-icon"></div>
-        <div className="WorkItem-content">
-          <div className="WorkItem-top">
-            <span className="WorkItem-date">{dates}</span>
-            <h3 className="WorkItem-title">{label}</h3>
+        <div className={styles.icon}></div>
+        <div className={styles.content}>
+          <div className={styles.top}>
+            <span className={styles.date}>{dates}</span>
+            <h3 className={styles.title}>{label}</h3>
           </div>
-          <p className="WorkItem-text">{text}</p>
+          <p className={styles.text}>{text}</p>
         </div>
       </article>
     )

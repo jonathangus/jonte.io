@@ -56,10 +56,10 @@ export default class CV extends Component {
 
     return (
       <section ref='container' className={styles.container}>
-        <div className="CV-inner"><h2>So far, so good</h2></div>
+        <div className={styles.inner}><h2>So far, so good</h2></div>
         <div className={styles.border} style={{top: `-${borderTop}px`}}></div>
-        <div className="CV-inner">
-          <div className="CV-line"></div>
+        <div className={styles.inner}>
+          <div className={styles.line}></div>
           {items.map((i, k) => <WorkItem active={ selectedItem == 'item-' + k} ref={'item-' + k} {...i} key={k} /> )}
         </div>
       </section>
