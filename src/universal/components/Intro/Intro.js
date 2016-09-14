@@ -55,7 +55,7 @@ export default class Intro extends Component {
       data[0].decimal = age[1];
       this.setState({data: data});
     }, 100);
-    return;
+    
     var granimInstance = new Granim({
       element: '#canvas-radial',
       direction: 'diagonal',
