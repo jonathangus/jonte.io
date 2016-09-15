@@ -1,12 +1,39 @@
 .skill {
   color: white;
-  padding: 4px 7px;
+  padding: 6px 9px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 $node: #78b743;
 
 .node {
   background-color: $node;
+}
+
+.git {
+  background-color:#414141;
+  color: white;
+}
+
+.php {
+  background-color: #617cbe;
+}
+
+.javascript,
+.javascriptes6 {
+  background-color: #f8dc3d;
+  color: #000;
+}
+
+.sass {
+  background-color: #c6538c;
+}
+
+.drupal {
+  background-color: #0c76ab;
 }
 
 .reactnative {

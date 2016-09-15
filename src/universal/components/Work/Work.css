@@ -3,16 +3,23 @@
 
 $b-hexa: 950px;
 
+.container {
+  background: $black;
+  color: #fafafa;
+  @include padding(80, 140);
+}
+
 .inner {
   max-width: $grid;
   margin: 0 auto;
   position: relative;
   transition: all 0.5s ease-out;
-  min-height: 500px;
+  min-height: 800px;
   -webkit-perspective: $b-hexa;
   perspective: $b-hexa;
   z-index: 10;
   padding: 0 20px;
+  margin-bottom: 150px;
 }
 
 .wrap {

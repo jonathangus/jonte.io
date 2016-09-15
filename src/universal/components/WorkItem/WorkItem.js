@@ -13,7 +13,7 @@ export default class WorkItem extends React.Component {
             <span className={styles.date}>{dates}</span>
             <h3 className={styles.title}>{label}</h3>
           </div>
-          <p className={styles.text}>{text}</p>
+          <div className={styles.text}>{text}</div>
         </div>
       </article>
     )

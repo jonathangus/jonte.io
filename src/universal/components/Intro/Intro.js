@@ -3,6 +3,7 @@ import InfoItem from '../InfoItem/InfoItem';
 import Granim from 'granim';
 import Egg from '../../extra/egg';
 
+
 import styles from './Intro.css';
 
 export default class Intro extends Component {
@@ -23,9 +24,22 @@ export default class Intro extends Component {
           value: 'Stockholm'
         },
         {
-          label: 'Occupation',
+          label: 'Self proclaimed',
           jobs: [
-            'Developer', 'Node Ninja', 'Moa', 'Halloj'
+            'Front-end developer',
+            'React fanatic',
+            'Backend compatible',
+            'Sass lunatic',
+            'Node enthusiast',
+            'CSS3 abuser',
+            'Redux doctor',
+            'Babel lover',
+            'MongoDB fanboy',
+            'Reluctant Drupalista',
+            'React Native warrior',
+            'git push -f',
+            'use Symfony',
+            'Angular alumni'
           ]
         }
       ]
