@@ -52,7 +52,7 @@ export default {
       '__CLIENT__': true,
       '__PRODUCTION__': false,
       'process.env.NODE_ENV': JSON.stringify('development')
-    }),
+    })
   ],
   resolve: {
     extensions: ['.js'],
