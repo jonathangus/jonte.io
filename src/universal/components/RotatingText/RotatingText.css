@@ -2,7 +2,7 @@
 @import '../../../client/scss/mixins.scss';
 
 .jobs {
-  color: $primary;
+  color: #00bcd4;
   display: inline-block;
   position: relative;
   text-align: left;
