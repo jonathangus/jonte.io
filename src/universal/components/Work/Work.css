@@ -42,7 +42,8 @@ $b-hexa: 950px;
   max-width: 100%;
   display: inline-block;
   width: 500px;
-
+  min-height: 300px;
+  
   @include b($b-hexa) {
     min-height: 500px;
   }
