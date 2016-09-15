@@ -16,6 +16,8 @@
 .wrap {
   display: flex;
   margin-top: 150px;
+  max-width: 100%;
+overflow: hidden;
 
   @include bm(900px) {
     flex-direction: column;
