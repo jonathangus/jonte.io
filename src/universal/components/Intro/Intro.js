@@ -28,8 +28,8 @@ export default class Intro extends Component {
           jobs: [
             'Front-end developer',
             'React fanatic',
-            'Backend compatible',
             'Sass lunatic',
+            'Backend bastard',
             'Node enthusiast',
             'CSS3 abuser',
             'Redux doctor',

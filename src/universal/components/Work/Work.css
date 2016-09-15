@@ -43,7 +43,7 @@ $b-hexa: 950px;
   display: inline-block;
   width: 500px;
   min-height: 300px;
-  
+
   @include b($b-hexa) {
     min-height: 500px;
   }
@@ -193,6 +193,11 @@ $b-hexa: 950px;
   list-style-type: none;
   display: inline-block;
   margin-right: 10px;
+
+  span {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
 }
 
 .button {
