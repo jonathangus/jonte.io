@@ -13,9 +13,8 @@ const gaHistory = createBrowserHistory()
 
 // Listen for changes to the current location. The
 // listener is called once immediately.
-gaHistory.listen(location => {
-  console.log('send', location)
-  ga('send', location);
+gaHistory.listen(function (location) {
+  ga('send', 'pageview', location.pathname);
 });
 
 const {

@@ -47,9 +47,6 @@ export default {
       test: /\.js$|\.css$/,
       threshold: 10240,
       minRatio: 0.8
-    }),
-    new webpack.DefinePlugin({
-      GA_TRACKING_CODE: JSON.stringify('UA-84236314-1'),
     })
   ],
   module: {
