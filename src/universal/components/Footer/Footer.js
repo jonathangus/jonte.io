@@ -4,5 +4,5 @@ import styles from './Footer.css';
 
 export default () =>
   <footer className={styles.footer}>
-    Footer
+    <p>This site is still development</p>
   </footer>

@@ -14,7 +14,10 @@ export default class Rage extends Component {
       'https://media2.giphy.com/media/wwiviuAxBYsCc/giphy.gif',
       'https://media0.giphy.com/media/13EjnL7RwHmA2Q/giphy.gif',
       'https://media1.giphy.com/media/WzTvbHTKyERfG/giphy.gif',
-      'https://media4.giphy.com/media/EmB4QtACPVBpS/giphy.gif'
+      'https://media4.giphy.com/media/EmB4QtACPVBpS/giphy.gif',
+      'http://www.abload.de/img/rage44qe39.gif',
+      'http://i.imgur.com/Q4BEk.gif',
+      'http://i.amz.mshcdn.com/FSQ1rjBoypcBezv8pM20TzROtP8=/fit-in/1200x9600/http%3A%2F%2Fmashable.com%2Fwp-content%2Fuploads%2F2013%2F06%2FTypewriter-throwing.gif'
     ]
 
     this.state = {
