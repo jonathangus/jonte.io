@@ -13,6 +13,14 @@ $node: #78b743;
   background-color: $node;
 }
 
+.webpack {
+  background-color: #a9c5ed;
+}
+
+.facebooksdk {
+  background-color:#3b5998;
+}
+
 .git {
   background-color:#414141;
   color: white;

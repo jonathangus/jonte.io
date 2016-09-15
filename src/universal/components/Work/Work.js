@@ -47,7 +47,9 @@ export default class Work extends Component {
               {work.map((w, index) =>
                 <div  key={index} className={styles.hexagon + ' ' + (selectedIndex == index ? styles.selectedHeca: '')} onClick={this.setActive.bind(this, index)}>
                   <div className={styles.hexa0}>
-                  <div className={styles.hexa1}><div className={styles.hexa2} style={{backgroundImage: `url(${this.state.work[index].thumbnail})`}}></div></div>
+                    <div className={styles.hexa1}>
+                      <div className={styles.hexa2} style={this.state.work[index].thumbnail ? {backgroundImage: `url(${this.state.work[index].thumbnail})`} : null}></div>
+                    </div>
                   </div>
                 </div>
               )}
@@ -58,7 +60,7 @@ export default class Work extends Component {
               <h3>{selected.title}</h3>
               <p dangerouslySetInnerHTML={{__html: selected.text}}></p>
               <ul>{selected.skills.map((s, i) => <li key={i} ><Skill skill={s} background={true} /></li>)}</ul>
-              <a className={styles.button} href={selected.link.url} title={selected.link.text}>{selected.link.text}</a>
+            {selected.link ? <a className={styles.button} href={selected.link.url} title={selected.link.text}>{selected.link.text}</a> : null }
             </div>  : null}
           </div>
 

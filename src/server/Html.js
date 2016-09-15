@@ -59,7 +59,7 @@ class Html extends Component {
         opacity: 1;
       }
     `;
-    const desc = 'Jonathan is a fullstack developer with a big love for front-end and a passion for React and Redux and Javascript overall.';
+    const desc = 'Jonathan is a fullstack developer with a big love for front-end and a passion for React, Redux and Javascript overall.';
     return (
      <html>
        <head>
@@ -70,7 +70,7 @@ class Html extends Component {
          <meta name="HandheldFriendly" content="true"></meta>
          <meta property="og:title" content={title}></meta>
          <meta property="og:type" content="website"></meta>
-         <meta property="og:url" content="https://jonathan-gustafsson.herokuapp.com"></meta>
+         <meta property="og:url" content="www.jonte.io"></meta>
          <meta property="og:image" content={'a'}></meta>
          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
          <meta property="fb:admins" content="733556657"></meta>

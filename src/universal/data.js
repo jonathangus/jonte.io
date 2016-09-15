@@ -24,87 +24,66 @@ export default {
   work: [
     {
       title: 'Gymbror',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque, lacus sed congue eleifend, lacus arcu tincidunt velit, vitae varius ipsum dolor nec enim. Duis efficitur vulputate turpis, id eleifend magna. Aenean dignissim pellentesque turpis sit amet ultrices. Nam id diam eu dolor commodo bibendum. Nullam rhoncus enim dui, consequat interdum ante euismod a. Curabitur eget diam lorem.',
+      text: 'Offline first gym progress app. Built with react-native with support from Redux. In the backend we have a node setup with MongoDB which makes it possible to sync your progress to diffrent devices. As authentication we use Facebook SDK.',
       thumbnail: require('../images/Arnold.jpg'),
       image: require('../images/Gymbror.jpg'),
       link: {
-        text: 'Github',
+        text: 'Get code on Github',
         url: 'https://github.com/jonathangus/gymbror'
       },
       skills: [
-        'React Native', 'Node', 'MongoDB'
+        'React Native', 'Redux', 'Facebook SDK', 'Node', 'MongoDB'
       ]
     },
     {
-      title: 'Wunderkraut.se2',
-      text: 'Lorem lorem',
-      thumbnail: 'https://i.imgur.com/amMCkxW.png',
-      link: {
-        text: 'Github',
-        url: 'https://github.com/jonathangus/gymbror'
-      },
+      title: 'Wunderkraut.se',
+      text: '@TODO Write more detailed text about this project.',
       skills: [
-        'React Native', 'Node', 'MongoDB'
+        'Drupal', 'Javascript', 'React', 'Symfony'
       ]
     },
     {
-      title: 'Wunderkraut.se3',
-      text: 'Lorem lorem',
-      thumbnail: 'https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/14249975_1362452657162164_6323881248985551478_o.jpg',
-      link: {
-        text: 'Github',
-        url: 'https://github.com/jonathangus/gymbror'
-      },
+      title: 'Jonte.io',
+      text: 'High performing react application with server rendering. ',
+      image: require('../images/jonte.png'),
       skills: [
-        'React Native', 'Node', 'MongoDB'
+        'Javascript/es6', 'React', 'Node', 'Webpack'
+      ],
+      link: {
+        text: 'Get code on Github',
+        url: 'https://github.com/jonathangus/portfolio'
+      },
+    },
+    {
+      title: 'Comhemplay.se',
+      text: '@TODO Write more detailed text about this project.',
+      skills: [
+        'Drupal', 'Javascript', 'Angular', 'Css'
       ]
     },
     {
-      title: 'Wunderkraut.se4',
-      text: 'Lorem lorem',
-      thumbnail: 'https://i.imgur.com/YweBL8a.jpg',
-      link: {
-        text: 'Github',
-        url: 'https://github.com/jonathangus/gymbror'
-      },
+      title: 'Kandima.com',
+      text: '@TODO Write more detailed text about this project.',
       skills: [
-        'React Native', 'Node', 'MongoDB'
+        'Drupal', 'Javascript', 'Css', 'Symfony'
       ]
     },
     {
-      title: 'Wunderkraut.se4',
-      text: 'Lorem lorem',
-      thumbnail: 'https://i.imgur.com/YweBL8a.jpg',
+      title: 'Gymbror api',
+      text: '@TODO Write more detailed text about this project.',
       link: {
-        text: 'Github',
-        url: 'https://github.com/jonathangus/gymbror'
+        text: 'Get code on Github',
+        url: 'https://github.com/jonathangus/gymbror-server'
       },
       skills: [
-        'React Native', 'Node', 'MongoDB'
+        'Node', 'MongoDB'
       ]
     },
     {
-      title: 'Wunderkraut.se4',
-      text: 'Lorem lorem',
-      thumbnail: 'https://i.imgur.com/YweBL8a.jpg',
-      link: {
-        text: 'Github',
-        url: 'https://github.com/jonathangus/gymbror'
-      },
+      title: 'esourcecentre.savethechildren.se',
+      text: '@TODO Write more detailed text about this project.',
       skills: [
-        'React Native', 'Node', 'MongoDB'
-      ]
-    },
-    {
-      title: 'Wunderkraut.se4',
-      text: 'Lorem lorem',
-      thumbnail: 'https://i.imgur.com/YweBL8a.jpg',
-      link: {
-        text: 'Github',
-        url: 'https://github.com/jonathangus/gymbror'
-      },
-      skills: [
-        'React Native', 'Node', 'MongoDB'
+        'Drupal', 'Javascript', 'Css',
       ]
     },
   ]

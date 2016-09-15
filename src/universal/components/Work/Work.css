@@ -14,12 +14,11 @@ $b-hexa: 950px;
   margin: 0 auto;
   position: relative;
   transition: all 0.5s ease-out;
-  min-height: 800px;
+  min-height: 600px;
   -webkit-perspective: $b-hexa;
   perspective: $b-hexa;
   z-index: 10;
   padding: 0 20px;
-  margin-bottom: 150px;
 }
 
 .wrap {
@@ -168,7 +167,7 @@ overflow: hidden;
 }
 
 .spotlight h3 {
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .spotlight img {
@@ -188,9 +187,9 @@ overflow: hidden;
 }
 
 .button {
-  background-color: $primary;
+  background-color: #00bcd4;
+margin-top: 40px;
   display: inline-block;
-  margin-top: 20px;
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
