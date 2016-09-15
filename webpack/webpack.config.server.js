@@ -64,7 +64,13 @@ export default {
           })  + '!sass-loader'
         })
       },
-      { test: /\.(png|jpg|jpeg|gif|woff)$/, loader: 'file-loader' },
+      {
+        test: /\.(eot|png|jpg|jpeg|gif|woff)$/,
+        loaders: [
+          'file-loader',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+      },
       {
         test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader : 'file-loader'
