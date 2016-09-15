@@ -13,9 +13,9 @@ const gaHistory = createBrowserHistory()
 
 // Listen for changes to the current location. The
 // listener is called once immediately.
-// gaHistory.listen(function (location) {
-//   ga('send', 'pageview', location.pathname);
-// });
+gaHistory.listen(function (location) {
+  ga('send', 'pageview', location.pathname);
+});
 
 const {
   routing

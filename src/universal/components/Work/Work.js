@@ -45,7 +45,7 @@ export default class Work extends Component {
             <div className={styles.hexagons + ' ' + (started ? styles.hexagonsDone : '')}>
               <div className={styles.thumbs + ' ' + (started ? styles.workSelected : '')}>
               {work.map((w, index) =>
-                <div  key={index} className={styles.hexagon + ' ' + (selectedIndex == index ? styles.selectedHeca: '')} onClick={this.setActive.bind(this, index)}>
+                <div title={this.state.work[index].title} key={index} className={styles.hexagon + ' ' + (selectedIndex == index ? styles.selectedHeca: '')} onClick={this.setActive.bind(this, index)}>
                   <div className={styles.hexa0}>
                     <div className={styles.hexa1}>
                       <div className={styles.hexa2} style={this.state.work[index].thumbnail ? {backgroundImage: `url(${this.state.work[index].thumbnail})`} : null}></div>

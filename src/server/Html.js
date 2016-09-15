@@ -83,11 +83,6 @@ class Html extends Component {
          {PROD ? <div id="root" dangerouslySetInnerHTML={{__html: root}}></div> : <div id="root"></div>}
           {PROD && <script dangerouslySetInnerHTML={{__html: manifest.text}}/>}
          <script src={PROD ? app.js : '/static/app.js'} />
-         <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
-         <script>
-          var galite = galite || {};
-          galite.UA = 'UA-84236314-1'; // Insert your tracking code here
-          </script>
        </body>
      </html>
     );
