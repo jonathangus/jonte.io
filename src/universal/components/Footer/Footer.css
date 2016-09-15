@@ -1,0 +1,6 @@
+@import '../../../client/scss/vars.scss';
+
+.footer {
+  padding: 150px 0;
+  background-color: $black;
+}

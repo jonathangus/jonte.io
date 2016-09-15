@@ -57,7 +57,7 @@ export default class Work extends Component {
               {selected.image ? <img src={selected.image} /> : null}
               <h3>{selected.title}</h3>
               <p dangerouslySetInnerHTML={{__html: selected.text}}></p>
-              <ul>{selected.skills.map((s, i) => <li key={i} ><Skill skill={s}/></li>)}</ul>
+              <ul>{selected.skills.map((s, i) => <li key={i} ><Skill skill={s} background={true} /></li>)}</ul>
               <a className={styles.button} href={selected.link.url} title={selected.link.text}>{selected.link.text}</a>
             </div>  : null}
           </div>

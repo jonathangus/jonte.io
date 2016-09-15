@@ -1,25 +1,27 @@
 @import '../../../client/scss/vars.scss';
 @import '../../../client/scss/mixins.scss';
 
+$b-hexa: 950px;
+
 .inner {
   max-width: $grid;
   margin: 0 auto;
   position: relative;
   transition: all 0.5s ease-out;
-  height: 500px;
-  -webkit-perspective: 700px;
-  perspective: 700px;
+  min-height: 500px;
+  -webkit-perspective: $b-hexa;
+  perspective: $b-hexa;
   z-index: 10;
   padding: 0 20px;
 }
 
 .wrap {
   display: flex;
-  margin-top: 150px;
+  margin-top: 100px;
   max-width: 100%;
 overflow: hidden;
 
-  @include bm(900px) {
+  @include bm($b-hexa) {
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
@@ -35,7 +37,11 @@ overflow: hidden;
   display: inline-block;
   width: 500px;
 
-  @include bm(900px) {
+  @include b($b-hexa) {
+    min-height: 700px;
+  }
+
+  @include bm($b-hexa) {
     height: 300px;
   }
 }
@@ -46,23 +52,26 @@ overflow: hidden;
   z-index: 5;
   width: 300px;
   left: 50%;
-  transform: translateX(-50%) scale(1.5);
+  transform: translateX(-50%);
   position: absolute;
   transition: all 0.4s ease;
 
-  @include bm(900px) {
-    transform: translateX(-50%) scale(1.2);
+  @include bm($b-hexa) {
+    transform: translateX(-50%);
+  }
+
+  @include b($b-hexa) {
+    width: 500px;
   }
 }
 
 .workSelected {
-  transform:rotateX(25deg) translateX(-50%) scale(1.2);
+  transform:rotateX(15deg) translateX(-50%);
   left: 50%;
 
-  @include b(900px) {
+  @include b($b-hexa) {
     left: 0;
-    transform: rotateX(45deg) scale(1.15) rotateY(0deg);
-    margin-left: 100px;
+    transform: rotateX(40deg) rotateY(0deg);
   }
 }
 
@@ -73,9 +82,6 @@ overflow: hidden;
   visibility: hidden;
    transform: rotate(120deg);
   cursor: pointer;
-  width: 80px;
-  height: 160px;
-  margin: -42px 5px;
 
   cursor: pointer;
   text-decoration: none;
@@ -85,16 +91,24 @@ overflow: hidden;
   transition: all 0.3s ease-out;
   opacity: 0.75;
 
-  @include bm(700px) {
+  @include b($b-hexa) {
+    width: 140px;
+    height: 280px;
+   margin: -72px 8px;
+  }
+
+  @include bm($b-hexa) {
+    width: 80px;
+    height: 160px;
     margin: -37px 8px;
   }
 }
 
 .hexagon:first-child,
 .hexagon:nth-child(8n-2) {
-    margin-left: 49px;
+        margin-left: 88px;
 
-    @include bm(700px) {
+    @include bm($b-hexa) {
       margin-left: 55px;
     }
   }
@@ -167,12 +181,12 @@ overflow: hidden;
 }
 
 .button {
-  background-color: var(--primary);
+  background-color: $primary;
   display: inline-block;
   margin-top: 20px;
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--white);
+  color: $white;
   padding: 12px 20px;
 }

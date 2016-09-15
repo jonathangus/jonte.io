@@ -1,11 +1,18 @@
+.skill {
+  color: white;
+  padding: 4px 7px;
+}
+
+$node: #78b743;
+
 .node {
-  color: #78b743;
+  background-color: $node;
 }
 
 .reactnative {
-  color: #3b5998;
+  background-color: #3b5998;
 }
 
 .mongodb {
-  color: #8d7150;
+  background-color: #8d7150;
 }

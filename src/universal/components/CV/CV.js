@@ -56,7 +56,7 @@ export default class CV extends Component {
 
     return (
       <section ref='container' className={styles.container}>
-        <div className={styles.inner}><h2>So far, so good</h2></div>
+        <div className={styles.inner}><h2>"So far, so good"</h2></div>
         <div className={styles.border}><div style={{transform: `translateY(-${borderTop}%)`}}></div></div>
         <div className={styles.inner}>
           <div className={styles.line}></div>

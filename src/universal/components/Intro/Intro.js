@@ -58,7 +58,8 @@ export default class Intro extends Component {
     var granimInstance = new Granim({
       element: '#canvas-radial',
       direction: 'diagonal',
-      opacity: [.8, .5, 0],
+      // opacity: [.8, .5, 0],
+      opacity: [.9, .7, .7],
       isPausedWhenNotInView: true,
       states : {
         "default-state": {
