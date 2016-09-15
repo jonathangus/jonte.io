@@ -37,6 +37,8 @@ function renderApp(res, store, assets, renderProps) {
 }
 
 export const renderPage = (req, res) => {
+  if (!res.getHeader('Cache-Control')) res.setHeader('Cache-Control', 'public, max-age=' + (maxAge / 1000));
+  
   const store = createStore( );
 
   const makeRoutes = require('../../build/prerender');
