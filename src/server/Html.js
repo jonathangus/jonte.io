@@ -70,13 +70,13 @@ class Html extends Component {
          <meta name="HandheldFriendly" content="true"></meta>
          <meta property="og:title" content={title}></meta>
          <meta property="og:type" content="website"></meta>
-         <meta property="og:url" content="www.jonte.io"></meta>
-         <meta property="og:image" content={'a'}></meta>
+         <meta property="og:url" content="http://www.jonte.io/"></meta>
          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
          <meta property="fb:admins" content="733556657"></meta>
          <meta property="fb:app_id" content="1072045509569270"></meta>
          <meta property="og:description" content={desc}></meta>
          <meta name="description" content={desc}></meta>
+         <link rel="canonical" href="http://www.jonte.io/"></link>
        </head>
        <body>
          <script dangerouslySetInnerHTML={{__html: initialState}} />
