@@ -57,7 +57,7 @@ export default {
      minRatio: 0.8
    }),
    new webpack.DefinePlugin({
-     GA_TRACKING_CODE: JSON.stringify('84236314'),
+     GA_TRACKING_CODE: JSON.stringify('UA-84236314-1'),
    }),
  ],
  module: {
