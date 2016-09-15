@@ -29,6 +29,10 @@
   text-align: center;
   line-height: 1;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .27);
+
+  @include bm(450px) {
+    top: 5%;
+  }
 }
 
 .fullImage {
