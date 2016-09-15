@@ -83,11 +83,19 @@
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 0.75;
+
+  @include bm(700px) {
+        margin: -37px 8px;
+  }
 }
 
 .hexagon:first-child,
 .hexagon:nth-child(8n-2) {
     margin-left: 49px;
+
+    @include bm(700px) {
+      margin-left: 55px;
+    }
   }
 
 .selectedHeca,
