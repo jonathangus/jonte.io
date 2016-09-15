@@ -37,8 +37,7 @@ export default class Intro extends Component {
             'MongoDB fanboy',
             'Reluctant Drupalista',
             'React Native warrior',
-            'git push -f',
-            'use Symfony',
+            'Git pirate',
             'Angular alumni'
           ]
         }

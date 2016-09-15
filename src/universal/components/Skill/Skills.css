@@ -22,6 +22,10 @@ $node: #78b743;
   background-color: #617cbe;
 }
 
+.angular {
+  background-color: #dd1b16;
+}
+
 .javascript,
 .javascriptes6 {
   background-color: #f8dc3d;
@@ -36,10 +40,34 @@ $node: #78b743;
   background-color: #0c76ab;
 }
 
+.symfony {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+
+.css {
+  background: linear-gradient(to right, #0070ba 50%, #26a7de 51%);
+}
+
+.wordpress {
+  background-color: #1d8bbe;
+}
+
+.redux {
+  background-color: #774abb;
+}
+
+.react,
 .reactnative {
   background-color: #3b5998;
 }
 
 .mongodb {
   background-color: #8d7150;
+}
+
+.ux {
+  background-color: #f7791f;
 }

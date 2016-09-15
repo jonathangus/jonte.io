@@ -7,7 +7,7 @@ export default {
       {
         dates: 'Jun 2014 - Present',
         label: 'Wunderkraut - Full stack developer',
-        text: <p>Wunderkraut is one of the biggest <Skill skill={'Drupal'} /> agencies in Europe. We exclusivly work agile and my main role is frontend. I work daily with <Skill skill={'Javascript/ES6'} /> and <Skill skill={'Sass'} />. </p>
+        text: <p>Wunderkraut is one of the biggest <Skill skill={'Drupal'} /> agencies in Europe. We exclusivly work agile and my main role is frontend. I work daily with <Skill skill={'Javascript/ES6'} /> and <Skill skill={'Sass'} />. When I feel to spice it up  <Skill skill={'Symfony'} /> is where I turn. Depending on projects I use frameworks like <Skill skill={'React'} />, <Skill skill={'Redux'} /> and even <Skill skill={'Angular'} /></p>
       },
       {
         dates: 'Jan 2014 - Jun 2014',
@@ -17,7 +17,7 @@ export default {
       {
         dates: 'Aug 2013 - Jan 2014',
         label: 'FernvikBalotis - Intern',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque, lacus sed congue eleifend, lacus arcu tincidunt velit, vitae varius ipsum dolor nec enim. Duis efficitur vulputate turpis, id eleifend magna. Aenean dignissim pellentesque turpis sit amet ultrices. Nam id diam eu dolor commodo bibendum. Nullam rhoncus enim dui, consequat interdum ante euismod a. Curabitur eget diam lorem. Vestibulum turpis ante, suscipit eu rhoncus eget, ultricies in sem.'
+        text: <p>Here i started working extra the week i started Nackademin. FernvikBalotis is a design studio who thaught me the value of <Skill skill={'UX'} />. Here i started my career working mostly with <Skill skill={'Wordpress'} /> and <Skill skill={'Css'} /></p>
       }
     ]
   },

@@ -9,11 +9,13 @@
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.17);
   text-transform: uppercase;
+  width: 100%;
 }
 
 .jobs li {
   display: inline-block;
   position: absolute;
+  width: 100%;
 
   left: 0;
   top: 0;
