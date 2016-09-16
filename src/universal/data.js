@@ -37,7 +37,7 @@ export default {
     },
     {
       title: 'Wunderkraut.se',
-      thumbnail: require('../images/default_thumb.jpg'),
+      thumbnail: require('../images/wk.jpg'),
       text: '@TODO Write more detailed text about this project.',
       skills: [
         'Drupal', 'Javascript', 'React', 'Symfony'
@@ -45,7 +45,7 @@ export default {
     },
     {
       title: 'Jonte.io',
-      thumbnail: require('../images/default_thumb.jpg'),
+      thumbnail: require('../images/me_thumb.jpg'),
       text: 'High performing react application with server rendering. ',
       image: require('../images/jonte.png'),
       skills: [
@@ -58,7 +58,7 @@ export default {
     },
     {
       title: 'Comhemplay.se',
-      thumbnail: require('../images/default_thumb.jpg'),
+      thumbnail: require('../images/comhem.jpg'),
       text: '@TODO Write more detailed text about this project.',
       skills: [
         'Drupal', 'Javascript', 'Angular', 'Css'
@@ -66,7 +66,7 @@ export default {
     },
     {
       title: 'Kandima.com',
-      thumbnail: require('../images/default_thumb.jpg'),
+      thumbnail: require('../images/kandima.jpg'),
       text: '@TODO Write more detailed text about this project.',
       skills: [
         'Drupal', 'Javascript', 'Css', 'Symfony'
@@ -74,7 +74,7 @@ export default {
     },
     {
       title: 'Gymbror api',
-      thumbnail: require('../images/default_thumb.jpg'),
+      thumbnail: require('../images/Arnold.jpg'),
       text: '@TODO Write more detailed text about this project.',
       link: {
         text: 'Get code on Github',
@@ -86,7 +86,7 @@ export default {
     },
     {
       title: 'resourcecentre.savethechildren.se',
-      thumbnail: require('../images/default_thumb.jpg'),
+      thumbnail: require('../images/save_the_children.jpg'),
       text: '@TODO Write more detailed text about this project.',
       skills: [
         'Drupal', 'Javascript', 'Css',
