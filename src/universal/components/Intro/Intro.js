@@ -106,7 +106,6 @@ export default class Intro extends Component {
           <a title="Email me" href="mailto:jonathan.gustafsson@hotmail.com"className={styles.email}>jonathan.gustafsson@hotmail.com</a>
         </div>
         </div>
-        <a className={styles.cred} href="https://www.flickr.com/photos/eriknson">Photo credit Erik Nilsson</a>
       </header>
     )
   }

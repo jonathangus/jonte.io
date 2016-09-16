@@ -160,7 +160,7 @@ $b-hexa: 950px;
   top: 0;
   bottom: 0;
   z-index: 1;
-  background-size: auto 140px;  
+  background-size: auto 140px;
   background-position: center;
 }
 
@@ -176,6 +176,7 @@ $b-hexa: 950px;
 }
 
 .spotlight h3 {
+  word-break: break-all;
   margin-top: 10px;
 }
 
