@@ -92,11 +92,11 @@ export default class Intro extends Component {
     return (
 
       <header className={styles.Intro}>
-        <h1 className={styles.title}>Jonathan Gustafsson</h1>
         <div className={styles.fullImage} style={{backgroundImage: `url(${image})`}}>
           <canvas className={styles.canvas} id="canvas-radial"></canvas>
         </div>
         <div className={styles.wrap}>
+          <h1 className={styles.title}>Jonathan Gustafsson</h1>
           <div className={styles.inner}>
           {data.map((d, k) => <InfoItem key={k} {...d} />)}
           <div className={styles.social}>
@@ -106,6 +106,7 @@ export default class Intro extends Component {
           <a title="Email me" href="mailto:jonathan.gustafsson@hotmail.com"className={styles.email}>jonathan.gustafsson@hotmail.com</a>
         </div>
         </div>
+        <a className={styles.cred} href="https://www.instagram.com/eriknson/">Photo by Erik Nilsson</a>
       </header>
     )
   }

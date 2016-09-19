@@ -19,19 +19,20 @@
 }
 
 .title {
-  position: absolute;
   z-index: 15;
   color: white;
   text-transform: uppercase;
-  top: 10%;
   left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 30px;
   text-align: center;
   line-height: 1;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .27);
 
-  @include bm(450px) {
-    top: 5%;
+  @include b(600px) {
+    margin-bottom: 0;
+    position: absolute;
+    top: 10%;
+    transform: translateX(-50%);
   }
 }
 
@@ -58,7 +59,7 @@
   z-index:2;
   max-width: $grid;
   margin: 0 auto;
-  height: 80%;
+  min-height: 80%;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
