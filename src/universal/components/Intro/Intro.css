@@ -23,7 +23,8 @@
   color: white;
   text-transform: uppercase;
   left: 50%;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   line-height: 1;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .27);
@@ -39,7 +40,7 @@
 .fullImage {
   background-size: cover;
   background-position: left top;
-      background-position: center top 30%;
+  background-position: center top 30%;
   position: absolute;
   left:0;
   top:0;
@@ -59,13 +60,14 @@
   z-index:2;
   max-width: $grid;
   margin: 0 auto;
-  min-height: 80%;
+  min-height: 85%;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
 
   @include b(600px) {
+    min-height: 80%;
     padding: 0 5px 0 10px;
   }
 }
@@ -92,15 +94,21 @@
   margin: 0 15px;
   display: inline-block;
   background-size: 100% 100%;
+
+  svg {
+    width: 40px;
+    height: 40px;
+
+    path {
+      transition: fill 0.2s ease;
+    }
+  }
+
+  &:hover svg path {
+    fill: $highlight;
+  }
 }
 
-.github {
-  background-image: url(../../../images/github-logo.png);
-}
-
-.linkedin {
-  background-image: url(../../../images/linkedin-logo.png);
-}
 
 .email {
   color: $white;

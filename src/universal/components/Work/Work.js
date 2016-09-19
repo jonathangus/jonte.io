@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../../data';
 import Skill from '../Skill/Skill';
+import Spotlight from '../Spotlight/Spotlight';
 
 import styles from './Work.css';
 
@@ -55,13 +56,7 @@ export default class Work extends Component {
               )}
               </div>
             </div>
-            {selected ? <div className={styles.spotlight + ' ' + (workShown ? styles.workShown : '')}>
-              {selected.image ? <img src={selected.image} /> : null}
-              <h3>{selected.title}</h3>
-              <p dangerouslySetInnerHTML={{__html: selected.text}}></p>
-              <ul>{selected.skills.map((s, i) => <li key={i} ><Skill skill={s} background={true} /></li>)}</ul>
-            {selected.link ? <a className={styles.button} href={selected.link.url} title={selected.link.text}>{selected.link.text}</a> : null }
-            </div>  : null}
+            {selected ? <Spotlight workShown={workShown} selected={selected} /> : null}
           </div>
 
         </div>

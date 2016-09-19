@@ -59,7 +59,9 @@ class Html extends Component {
         opacity: 1;
       }
     `;
-    const desc = 'Jonathan is a fullstack developer with a big love for front-end and a passion for React, Redux and Javascript overall.';
+    const desc = "I am a front-end developer with a big burning passion for creating amazing sites and applications for the web. I know a lot of diffrent technologies but my one true love is React.";
+    const image = require('../../../images/me.jpg');
+
     return (
      <html>
        <head>
@@ -72,17 +74,18 @@ class Html extends Component {
          <meta property="og:type" content="website"></meta>
          <meta property="og:url" content="http://www.jonte.io/"></meta>
          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+         <meta name="keywords" content="developer, front-end developer, react developer, redux developer, jonathan gustafsson, jontgus, react native developer"></meta>
          <meta property="fb:admins" content="733556657"></meta>
          <meta property="fb:app_id" content="1072045509569270"></meta>
          <meta property="og:description" content={desc}></meta>
          <meta name="description" content={desc}></meta>
-         <meta name="og:image" content="https://c1.staticflickr.com/9/8821/29137810784_c5ec51ff71_b.jpg"></meta>
+         <meta name="og:image" content={image}></meta>
          <meta name="twitter:card" content="summary"></meta>
-        <meta name="twitter:site" content='http://www.jonte.io/'></meta>
-        <meta name="twitter:title" content={title}></meta>
-        <meta name="twitter:description" content={desc}></meta>
-        <meta name="twitter:creator" content="jontgus"></meta>
-        <meta name="twitter:image" content="https://c1.staticflickr.com/9/8821/29137810784_c5ec51ff71_b.jpg"></meta>
+         <meta name="twitter:site" content='http://www.jonte.io/'></meta>
+         <meta name="twitter:title" content={title}></meta>
+         <meta name="twitter:description" content={desc}></meta>
+         <meta name="twitter:creator" content="jontgus"></meta>
+         <meta name="twitter:image" content={image}></meta>
          <link rel="canonical" href="http://www.jonte.io/"></link>
        </head>
        <body>
