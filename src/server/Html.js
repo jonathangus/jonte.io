@@ -76,6 +76,7 @@ class Html extends Component {
          <meta property="fb:app_id" content="1072045509569270"></meta>
          <meta property="og:description" content={desc}></meta>
          <meta name="description" content={desc}></meta>
+         <meta name="og:image" content="https://c1.staticflickr.com/9/8821/29137810784_c5ec51ff71_b.jpg"></meta>
          <link rel="canonical" href="http://www.jonte.io/"></link>
        </head>
        <body>
