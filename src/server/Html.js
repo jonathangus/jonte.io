@@ -59,8 +59,8 @@ class Html extends Component {
         opacity: 1;
       }
     `;
-    const desc = "I am a front-end developer with a big burning passion for creating amazing sites and applications for the web. I know a lot of diffrent technologies but my one true love is React.";
-    const image = require('../../../images/me.jpg');
+    const desc = "I am a ambitous front-end developer with a burning passion for creating amazing sites and applications for the web.";
+    const image = 'http://i.imgur.com/23xUiwQ.jpg';
 
     return (
      <html>
