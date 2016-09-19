@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import InfoItem from '../InfoItem/InfoItem';
 import Granim from 'granim';
 import Egg from '../../extra/egg';
-
+import Shake from 'shake.js';
 
 import styles from './Intro.css';
 
@@ -60,6 +60,19 @@ export default class Intro extends Component {
         image: require('../../../images/ful.jpg')
       })
     }).Listen();
+
+    if(typeof window !== 'undefined') {
+      new Shake({
+          threshold: 15
+      }).start();
+
+      // register a shake event
+      window.addEventListener('shake', () => {
+        this.setState({
+          image: require('../../../images/ful.jpg')
+        })
+      }, false);
+    }
 
     setInterval(() => {
       const data = this.state.data;
