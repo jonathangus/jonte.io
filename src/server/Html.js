@@ -77,6 +77,12 @@ class Html extends Component {
          <meta property="og:description" content={desc}></meta>
          <meta name="description" content={desc}></meta>
          <meta name="og:image" content="https://c1.staticflickr.com/9/8821/29137810784_c5ec51ff71_b.jpg"></meta>
+         <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:site" content='http://www.jonte.io/'></meta>
+        <meta name="twitter:title" content={title}></meta>
+        <meta name="twitter:description" content={desc}></meta>
+        <meta name="twitter:creator" content="jontgus"></meta>
+        <meta name="twitter:image" content="https://c1.staticflickr.com/9/8821/29137810784_c5ec51ff71_b.jpg"></meta>
          <link rel="canonical" href="http://www.jonte.io/"></link>
        </head>
        <body>
