@@ -59,7 +59,7 @@ class Html extends Component {
         opacity: 1;
       }
     `;
-    const desc = "I am a ambitous front-end developer with a burning passion for creating amazing sites and applications for the web.";
+    const desc = "I am a outgoing front-end developer with a burning passion for creating amazing sites and applications for the web. I love working with javascript with React as my favourite framework.";
     const image = 'http://i.imgur.com/23xUiwQ.jpg';
 
     return (
