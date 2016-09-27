@@ -5,6 +5,10 @@
   min-height: 100vh;
   position: relative;
   padding: 20px 0 10px 0;
+
+  @media (max-width: 800px) {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 900px) {
