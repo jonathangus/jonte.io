@@ -2,9 +2,9 @@
 @import '../../../client/scss/mixins.scss';
 
 .Intro{
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
-
+  padding: 20px 0 10px 0;
 }
 
 @media (max-width: 900px) {
@@ -30,7 +30,7 @@
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .27);
   padding: 0 20px;
 
-  @include b(600px) {
+  @include b(800px) {
     margin-bottom: 0;
     position: absolute;
     top: 10%;
@@ -87,6 +87,10 @@
 .social {
   margin: 15px 0;
   text-align: center;
+
+  @media (max-width: 800px) {
+    margin-top: 5px;
+  }
 }
 
 .media {
