@@ -12,7 +12,7 @@
   width: 100%;
 
   @include bm(600px) {
-    min-height: 128px;
+    min-height: 115px;
   }
 }
 
