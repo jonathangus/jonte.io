@@ -146,4 +146,8 @@
   color: white;
   text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, .5);
   text-decoration: none;
+
+  @include bm(900px) {
+    display: none;
+  }
 }
