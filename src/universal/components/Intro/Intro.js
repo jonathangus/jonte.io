@@ -12,7 +12,7 @@ export default class Intro extends Component {
     const age = this.calculateAge();
 
     this.state = {
-      image: require('../../../images/me.jpg'),
+      image: require('../../../images/deep.jpg'),
       data: [
         {
           label: 'Age',
