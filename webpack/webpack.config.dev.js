@@ -64,7 +64,7 @@ export default {
       // Javascript
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: babelQuery,
         include: clientInclude
       },

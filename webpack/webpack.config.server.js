@@ -57,7 +57,7 @@ export default {
         include: serverInclude,
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: 'css?'+qs.stringify({
+          loader: 'css-loader?'+qs.stringify({
             modules: true,
             importLoaders: 1,
             localIdentName: '[name]_[local]_[hash:base64:5]'
@@ -68,7 +68,7 @@ export default {
         test: /\.(eot|png|jpg|jpeg|gif|woff)$/,
         loaders: [
           'file-loader',
-          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+          'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
       {
@@ -78,7 +78,7 @@ export default {
 
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         include: serverInclude
       }
 
