@@ -22,7 +22,6 @@ class App extends Component {
       });
     }, 100);
 
-    console.log(`%c Hey! Good work in finding this mysterious place. As a reward I will give you my phone number, ${number}`, 'background: #414141; padding: 3px; color: white; display: block;')
   }
 
   render () {

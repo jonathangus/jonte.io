@@ -7,9 +7,14 @@ export default {
   cv: {
     items: [
       {
-        dates: 'Jun 2014 - Present',
+        dates: 'Nov 2016 - Present',
+        label: 'Bidtheatre - Lead Frontend developer',
+        text: <p>Bidtheatre is a company working with RTB (real time bidding) and is developing a brand new graphical user interface which I am in charge of. Here I am exclusivly working with <Skill skill={'React'} /> + <Skill skill={'Redux'} /> communcating to the api through <Skill skill={'Rest'} /> </p>
+      },
+      {
+        dates: 'Jun 2014 - Nov 2016',
         label: 'Wunderkraut - Full stack developer',
-        text: <p>Wunderkraut is one of the biggest <Skill skill={'Drupal'} /> agencies in Europe. We exclusivly work agile and my main role is frontend. I work daily with <Skill skill={'Javascript/ES6'} /> and <Skill skill={'Sass'} />. I also like to write backend in <Skill skill={'php'} /> with <Skill skill={'Symfony'} />. Depending on projects I use frameworks like <Skill skill={'React'} />, <Skill skill={'Redux'} /> and <Skill skill={'Angular'} /> </p>
+        text: <p>Wunderkraut is one of the biggest <Skill skill={'Drupal'} /> agencies in Europe. Wunderkraut exclusivly work agile and my main role was frontend. I worked daily with <Skill skill={'Javascript/ES6'} /> and <Skill skill={'Sass'} />. I also wrote some backend in <Skill skill={'php'} /> with <Skill skill={'Symfony'} />. Depending on projects I used frameworks like <Skill skill={'React'} />, <Skill skill={'Redux'} /> and <Skill skill={'Angular'} /> </p>
       },
       {
         dates: 'Jan 2014 - Jun 2014',

@@ -9,6 +9,10 @@
 
 $node: #78b743;
 
+.rest {
+  background-color: #18b889;
+}
+
 .laravel {
   background-color: #f4645f;
 }
