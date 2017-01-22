@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import qs from 'querystring';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import AssetsPlugin from 'assets-webpack-plugin';
 import CompressionPlugin from 'compression-webpack-plugin';
@@ -59,16 +60,23 @@ export default {
    new webpack.DefinePlugin({
      GA_TRACKING_CODE: JSON.stringify('UA-43885727-4'),
    }),
+  new ExtractTextPlugin({
+      filename: 'styles.css',
+      allChunks: true
+  })
  ],
  module: {
    loaders: [
      {
        test: /\.css$/,
-       loader: 'style-loader!css-loader?'+qs.stringify({
-         modules: true,
-         importLoaders: 1,
-         localIdentName: '[name]_[local]_[hash:base64:5]'
-       })  + '!sass-loader',
+       loader: ExtractTextPlugin.extract({
+           fallbackLoader: 'style-loader',
+           loader: '!css-loader?' + qs.stringify({
+               minimize: true,
+               modules: true,
+               importLoaders: 1,
+               localIdentName: '[name]-[local]'
+           }) + '!sass'}),
        include: clientInclude,
      },
      {

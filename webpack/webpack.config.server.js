@@ -60,7 +60,7 @@ export default {
           loader: 'css-loader?'+qs.stringify({
             modules: true,
             importLoaders: 1,
-            localIdentName: '[name]_[local]_[hash:base64:5]'
+            localIdentName: '[name]-[local]'
           })  + '!sass-loader'
         })
       },

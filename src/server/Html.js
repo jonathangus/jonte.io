@@ -58,7 +58,14 @@ class Html extends Component {
       #app.have-loaded {
         opacity: 1;
       }
-    `;
+    // `;
+
+    const nojsCss = `
+      #app {
+        opacity : 1!important;
+      }
+    `
+
     const desc = "I am a outgoing front-end developer with a burning passion for creating amazing sites and applications for the web. I love working with javascript with React as my favourite framework.";
     const image = 'http://i.imgur.com/23xUiwQ.jpg';
 
@@ -87,12 +94,18 @@ class Html extends Component {
          <meta name="twitter:creator" content="jontgus"></meta>
          <meta name="twitter:image" content={image}></meta>
          <link rel="canonical" href="http://www.jonte.io/"></link>
+           {PROD &&  <link rel="stylesheet" type="text/css" href="/static/styles.css"></link>}
        </head>
        <body>
          <script dangerouslySetInnerHTML={{__html: initialState}} />
          {PROD ? <div id="root" dangerouslySetInnerHTML={{__html: root}}></div> : <div id="root"></div>}
           {PROD && <script dangerouslySetInnerHTML={{__html: manifest.text}}/>}
          <script src={PROD ? app.js : '/static/app.js'} />
+         <noscript>
+           <style type="text/css">
+               {nojsCss}
+           </style>
+         </noscript>
        </body>
      </html>
     );
