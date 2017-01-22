@@ -45,7 +45,7 @@ export default {
     },
     {
       title: 'Wunderkraut',
-      url: 'https://wunderkraut.se/',
+      path: 'https://wunderkraut.se/',
       thumbnail: require('../images/wk.jpg'),
       text: <p>This was my first Drupal 8 website and it was a real challenge! When we started working Drupal 8 where still in beta with many bugs. But we succeed on creating a good looking site and I got to introduce React, which was in beta as well. <br></br><br></br>I worked a lot with Angular doing REST calls for creating cool interfaces such the dynamic TV Guide. I also with VOD and linear streaming.<br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p>,
       skills: [
@@ -69,7 +69,7 @@ export default {
     },
     {
       title: 'Comhemplay',
-      url: 'http://comhemplay.se/',
+      path: 'http://comhemplay.se/',
       thumbnail: require('../images/comhem.jpg'),
       text: <p>Comhem is one of the biggest tv and internet provider in Sweden. Our task were to redo there old streaming service with a new and fresh one. My role in this project was exclusivly frontend. <br></br><br></br>I worked a lot with Angular doing REST calls for creating cool interfaces such the dynamic TV Guide. I also with VOD and linear streaming.<br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p> ,
       skills: [
@@ -80,7 +80,7 @@ export default {
     {
       title: 'Kandima',
       image: require('../images/kandima_gif.gif'),
-      url: 'http://kandima.com/',
+      path: 'http://kandima.com/',
       thumbnail: require('../images/kandima.jpg'),
       text: <p>Kandima is luxurious island in the Maldives. On this project I built frontend with some playful animations and backend with Drupal 8. <br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p>,
       skills: [
@@ -103,7 +103,7 @@ export default {
     },
     {
       title: 'Save the children resource centre',
-      url: 'http://resourcecentre.savethechildren.se/',
+      path: 'http://resourcecentre.savethechildren.se/',
       thumbnail: require('../images/save_the_children.jpg'),
       text: <p>We remade the front-end for Save the childrens resource center. The resouce center is a collection of articles and documents. <br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p>,
       skills: [
