@@ -14,6 +14,7 @@ export default class Spotlight extends Component {
     };
   }
 
+
   componentWillReceiveProps(nextProps) {
     if(nextProps.workShown !== this.state.workShown) {
       this.setState({

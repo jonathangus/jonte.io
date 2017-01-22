@@ -3,9 +3,11 @@ import Intro from '../Intro/Intro';
 import CV from '../CV/CV';
 import Work from '../Work/Work';
 
-export default () =>
+export default ({children}) =>
   <div>
     <Intro />
     <CV />
-    <Work />
+    <Work>
+      {children}
+    </Work>
   </div>

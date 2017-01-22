@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import data from '../../data';
 import Skill from '../Skill/Skill';
 import Spotlight from '../Spotlight/Spotlight';
-
+import {push} from 'react-router-redux';
 import styles from './Work.css';
+import { findDOMNode } from 'react-dom';
+import { connect } from 'react-redux';
 
-export default class Work extends Component {
+class Work extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,13 +18,12 @@ export default class Work extends Component {
     }
   }
 
-  setActive(index) {
-    const newState = {
-      selectedIndex: index
-    }
+  componentDidMount() {
 
-    if(!this.state.started) {
-      newState.started = true;
+    if(this.props.children) {
+      this.setState({
+        started: true
+      });
 
       setTimeout(() => {
         this.setState({
@@ -30,13 +31,31 @@ export default class Work extends Component {
         })
       }, 400);
     }
+  }
 
-    this.setState(newState);
+  setActive(index) {
+    const work = data.work;
+    const selected = work[index];
+
+    this.props.go(selected.url);
+
+    if(!this.state.started) {
+      this.setState({
+        started: true
+      });
+
+      setTimeout(() => {
+        this.setState({
+          workShown: true
+        })
+      }, 400);
+    }
   }
 
   render () {
+    const { children } = this.props;
     const { work, selectedIndex, started, workShown} = this.state;
-    const selected = work[selectedIndex];
+
 
     return (
       <section className={styles.container}>
@@ -56,7 +75,7 @@ export default class Work extends Component {
               )}
               </div>
             </div>
-            {selected ? <Spotlight workShown={workShown} selected={selected} /> : null}
+            {workShown && children}
           </div>
 
         </div>
@@ -64,3 +83,14 @@ export default class Work extends Component {
     )
   }
 }
+
+
+const mapStateToProps = (state, ownProps) => ({
+
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    go: (id) => dispatch(push(`/work/${id}`)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Work);

@@ -40,7 +40,8 @@ export default {
       },
       skills: [
         'React Native', 'Redux', 'Facebook SDK', 'Node'
-      ]
+      ],
+      url : 'gymbror'
     },
     {
       title: 'Wunderkraut',
@@ -49,7 +50,8 @@ export default {
       text: <p>This was my first Drupal 8 website and it was a real challenge! When we started working Drupal 8 where still in beta with many bugs. But we succeed on creating a good looking site and I got to introduce React, which was in beta as well. <br></br><br></br>I worked a lot with Angular doing REST calls for creating cool interfaces such the dynamic TV Guide. I also with VOD and linear streaming.<br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p>,
       skills: [
         'Drupal', 'Javascript', 'React', 'Symfony', 'Css'
-      ]
+      ],
+      url : 'wunderkraut'
     },
     {
       title: 'Jonte.io',
@@ -63,6 +65,7 @@ export default {
         text: 'Get code on Github',
         url: 'https://github.com/jonathangus/portfolio'
       },
+      url : 'jonteio'
     },
     {
       title: 'Comhemplay',
@@ -71,7 +74,8 @@ export default {
       text: <p>Comhem is one of the biggest tv and internet provider in Sweden. Our task were to redo there old streaming service with a new and fresh one. My role in this project was exclusivly frontend. <br></br><br></br>I worked a lot with Angular doing REST calls for creating cool interfaces such the dynamic TV Guide. I also with VOD and linear streaming.<br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p> ,
       skills: [
         'Drupal', 'Javascript', 'Angular', 'Css'
-      ]
+      ],
+      url : 'comhemplay'
     },
     {
       title: 'Kandima',
@@ -81,7 +85,8 @@ export default {
       text: <p>Kandima is luxurious island in the Maldives. On this project I built frontend with some playful animations and backend with Drupal 8. <br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p>,
       skills: [
         'Drupal', 'Javascript', 'Css', 'Symfony'
-      ]
+      ],
+      url : 'kandima'
     },
     {
       title: 'Gymbror api',
@@ -93,7 +98,8 @@ export default {
       },
       skills: [
         'Node', 'MongoDB'
-      ]
+      ],
+      url : 'gymbror-api'
     },
     {
       title: 'Save the children resource centre',
@@ -102,7 +108,8 @@ export default {
       text: <p>We remade the front-end for Save the childrens resource center. The resouce center is a collection of articles and documents. <br></br><br></br>This work was done during my employment at <a target="_blank" style={{color: '#E56716'}} href="https://wunderkraut.se/">Wunderkraut</a></p>,
       skills: [
         'Drupal', 'Javascript', 'Css', 'Php',
-      ]
+      ],
+      url : 'save-the-children'
     },
   ]
 }
