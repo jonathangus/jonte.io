@@ -11,9 +11,6 @@ RUN npm install -g yarn
 RUN yarn
 RUN npm rebuild node-sass
 
-# Build the app
-RUN npm run build
-
 # Expose the app port
 EXPOSE 8080
 
