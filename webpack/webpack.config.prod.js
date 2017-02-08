@@ -14,26 +14,27 @@ const universal = path.join(src, 'universal');
 
 const clientInclude = [client, universal];
 
-export default {
-  context: src,
+
+const resolve = {
+    root: src,
+    extensions: ['', '*', '.js', '.jsx']
+};
+
+const config =  {
+  // context: src,
   entry: {
-    app: ['babel-polyfill', 'client/client.js'],
+    app: ['babel-polyfill', './src/client/client.js'],
   },
+  // resolveLoader: {
+  //   root: path.join(__dirname, 'node_modules')
+  // },
   output: {
     filename: '[name]_[chunkhash].js',
     chunkFilename: '[name]_[chunkhash].js',
     path: build,
     publicPath: '/static/'
   },
-  resolve: {
-    extensions: ['.js'],
-    modules: [src, 'node_modules'],
-    unsafeCache: true
-  },
-  node: {
-    dns: 'mock',
-    net: 'mock'
-  },
+  resolve: resolve,
   plugins: [
    new webpack.NamedModulesPlugin(),
    new webpack.optimize.CommonsChunkPlugin({
@@ -60,8 +61,7 @@ export default {
    new webpack.DefinePlugin({
      GA_TRACKING_CODE: JSON.stringify('UA-43885727-4'),
    }),
-  new ExtractTextPlugin({
-      filename: 'styles.css',
+  new ExtractTextPlugin('styles.css', {
       allChunks: true
   })
  ],
@@ -69,21 +69,20 @@ export default {
    loaders: [
      {
        test: /\.css$/,
-       loader: ExtractTextPlugin.extract({
-           fallbackLoader: 'style-loader',
-           loader: '!css-loader?' + qs.stringify({
+        loader: ExtractTextPlugin.extract('style-loader',
+           '!css-loader?' + qs.stringify({
                minimize: true,
                modules: true,
                importLoaders: 1,
                localIdentName: '[name]-[local]'
-           }) + '!sass'}),
+           }) + '!sass'),
        include: clientInclude,
      },
      {
        test: /\.(eot|png|jpg|jpeg|gif|woff)$/,
        loaders: [
          'file-loader',
-         'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        //  'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
        ]
      },
      {
@@ -99,3 +98,6 @@ export default {
    ]
  }
 }
+
+
+export default config;

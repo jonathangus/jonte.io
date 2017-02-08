@@ -12,9 +12,12 @@ const server = path.join(src, 'server');
 const serverInclude = [server, universal];
 
 export default {
-  context: src,
   entry: {
-    prerender: 'universal/routes/index.js'
+    prerender: './src/universal/routes/index.js'
+  },
+  resolve : {
+    root: src,
+    extensions: ['', '*', '.js', '.jsx']
   },
   target: 'node',
   output: {
@@ -24,15 +27,10 @@ export default {
     libraryTarget: 'commonjs2',
     publicPath: '/static/'
   },
-  resolve: {
-    extensions: ['.js'],
-    modules: [src, 'node_modules']
-  },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin({
-      filename: '[name].css',
-      allChunks: true
+    new ExtractTextPlugin('styles.css', {
+        allChunks: true
     }),
     new webpack.optimize.UglifyJsPlugin({compressor: {warnings: false}}),
     new webpack.optimize.LimitChunkCountPlugin({maxChunks: 1}),
@@ -55,14 +53,13 @@ export default {
       {
         test: /\.css$/,
         include: serverInclude,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader?'+qs.stringify({
-            modules: true,
-            importLoaders: 1,
-            localIdentName: '[name]-[local]'
-          })  + '!sass-loader'
-        })
+        loader: ExtractTextPlugin.extract('style-loader',
+          '!css-loader?' + qs.stringify({
+              minimize: true,
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]-[local]'
+          }) + '!sass'),
       },
       {
         test: /\.(eot|png|jpg|jpeg|gif|woff)$/,

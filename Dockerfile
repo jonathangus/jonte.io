@@ -1,4 +1,4 @@
-FROM node:7.0.0
+FROM node:5.0.0
 
 # Prepare app directory
 RUN mkdir -p /usr/src/app
@@ -6,7 +6,10 @@ ADD . /usr/src/app
 
 # Install dependencies
 WORKDIR /usr/src/app
-RUN npm install
+
+RUN npm install -g yarn
+RUN yarn
+RUN npm rebuild node-sass
 
 # Build the app
 RUN npm run build
