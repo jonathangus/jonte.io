@@ -8,11 +8,12 @@ ADD . /usr/src/app
 WORKDIR /usr/src/app
 
 RUN npm install -g yarn
+RUN npm install -g webpack
 RUN yarn
 RUN npm rebuild node-sass
 
 # Expose the app port
-EXPOSE 8080
+EXPOSE 80
 
 # Start the app
 CMD npm start
