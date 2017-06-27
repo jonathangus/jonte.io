@@ -1,7 +1,14 @@
-version: '2'
+version: "2"
 services:
-    jonteio:
-        build: .
-        ports:
-            - "8080:8800"
-
+  public:
+    build: .
+    ports:
+      - "4008:4008"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    tty: true
+    expose:
+      - "4008"
+    environment:
+      - PORT=4008
