@@ -75,11 +75,17 @@ export default {
         test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader : 'file-loader'
       },
-
+         {
+        test: /\.json$/,
+        loader: 'json-loader',
+        include: serverInclude,
+        exclude: /node_modules/,
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: serverInclude
+        include: serverInclude,
+        exclude: /node_modules/,
       }
 
     ]

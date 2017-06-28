@@ -4,7 +4,6 @@ import colors  from 'colors';
 import favicon from 'serve-favicon';
 // Development Libraries
 import webpack from 'webpack';
-import devWebpackConfig from '../../webpack/webpack.config.dev';
 import chokidar from 'chokidar';
 import compression from 'compression';
 
@@ -28,6 +27,7 @@ if (PROD) {
 
 // Development settings
 } else if (!PROD) {
+  const devWebpackConfig = require('../../webpack/webpack.config.dev');
   const compiler = webpack(devWebpackConfig);
 
   app.use(require('webpack-dev-middleware')(compiler, {
